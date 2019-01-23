@@ -20,7 +20,14 @@
 
     <dependencies>
 
-        <!-- 架构环境组件 -->
+        <!-- 架构公共模块 -->
+        <dependency>
+            <groupId>com.imalvisc</groupId>
+            <artifactId>imalvisc-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- 架构环境模块 -->
         <dependency>
             <groupId>com.imalvisc</groupId>
             <artifactId>imalvisc-env</artifactId>

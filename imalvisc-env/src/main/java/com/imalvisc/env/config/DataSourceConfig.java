@@ -16,7 +16,6 @@ public class DataSourceConfig {
 
     @Bean
     public DataSource dataSource() {
-        System.out.println(properties);
         DruidDataSource druidDataSource = new DruidDataSource();
         druidDataSource.setDriverClassName(properties.getDriver());
         druidDataSource.setUrl(properties.getUrl());

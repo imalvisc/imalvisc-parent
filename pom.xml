@@ -30,10 +30,18 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <lombok.version>1.16.18</lombok.version>
         <druid.version>1.1.10</druid.version>
+        <mybatis.starter.version>1.3.2</mybatis.starter.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Mybatis SpringBoot组件 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.starter.version}</version>
+            </dependency>
 
             <!-- Druid数据源 -->
             <dependency>
