@@ -20,16 +20,11 @@
 
     <dependencies>
 
-        <!-- SpringBoot Test组件 -->
+        <!-- 架构环境组件 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-        </dependency>
-
-        <!-- SpringBoot Web组件 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.imalvisc</groupId>
+            <artifactId>imalvisc-env</artifactId>
+            <version>1.0.0</version>
         </dependency>
 
     </dependencies>

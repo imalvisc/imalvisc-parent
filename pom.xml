@@ -11,6 +11,8 @@
         <module>imalvisc-common</module>
         <module>imalvisc-api</module>
         <module>imalvisc-bstage</module>
+        <module>imalvisc-config</module>
+        <module>imalvisc-env</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -26,10 +28,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
+        <lombok.version>1.16.18</lombok.version>
+        <druid.version>1.1.10</druid.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Druid数据源 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <!-- lombok插件 -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
