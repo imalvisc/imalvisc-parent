@@ -31,10 +31,27 @@
         <lombok.version>1.16.18</lombok.version>
         <druid.version>1.1.10</druid.version>
         <mybatis.starter.version>1.3.2</mybatis.starter.version>
+        <commons.pool2.version>2.4.2</commons.pool2.version>
+        <jedis.version>2.9.0</jedis.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Redis Jedis客户端 -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
+            <!-- Apache Commons 组件 -->
+            <!-- common-pool2，池化规范接口，SpringBoot2.0版本后Redis 的JedisFactory连接池默认依赖 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons.pool2.version}</version>
+            </dependency>
 
             <!-- Mybatis SpringBoot组件 -->
             <dependency>

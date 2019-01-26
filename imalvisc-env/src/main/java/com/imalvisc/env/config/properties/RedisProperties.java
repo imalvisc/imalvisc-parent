@@ -15,18 +15,20 @@ import javax.annotation.PostConstruct;
 @NoArgsConstructor
 @Accessors(chain = true)
 @Component
-@ConfigurationProperties(prefix = "jdbc")
+@ConfigurationProperties(prefix = "redis")
 @PropertySource(value = "classpath:env.properties")
-public class DataSourceProperties {
+public class RedisProperties {
 
-    private String driver;
-    private String url;
-    private String username;
+    private JedisPoolProperties pool = new JedisPoolProperties();
+    private String host;
+    private int port;
     private String password;
+    private int timeout;
+    private int database;
 
     @PostConstruct
     public void init() {
-        log.info("数据库配置参数：{}", this.toString());
+        log.info("Redis配置参数：{}", this.toString());
     }
 
 }

@@ -12,5 +12,8 @@
     <artifactId>imalvisc-config</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+
+    </dependencies>
 
 </project>

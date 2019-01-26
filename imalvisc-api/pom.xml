@@ -27,13 +27,6 @@
             <version>1.0.0</version>
         </dependency>
 
-        <!-- 架构环境模块 -->
-        <dependency>
-            <groupId>com.imalvisc</groupId>
-            <artifactId>imalvisc-env</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
     </dependencies>
 
 </project>

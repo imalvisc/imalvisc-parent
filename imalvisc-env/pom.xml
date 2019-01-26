@@ -72,6 +72,24 @@
             <version>${druid.version}</version>
         </dependency>
 
+        <!-- SpringBoot Data Redis组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <!-- common-pool2，池化规范接口，SpringBoot2.0版本后Redis 的JedisFactory连接池默认依赖 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
+        <!-- Redis Jedis客户端 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
     </dependencies>
 
 
