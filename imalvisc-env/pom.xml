@@ -90,6 +90,12 @@
             <artifactId>jedis</artifactId>
         </dependency>
 
+        <!-- SpringBoot Amqp组件，默认实现为RabbitMQ -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
     </dependencies>
 
 

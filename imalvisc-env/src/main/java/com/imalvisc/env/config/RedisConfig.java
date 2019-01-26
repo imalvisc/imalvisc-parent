@@ -25,6 +25,7 @@ public class RedisConfig {
     private RedisProperties properties;
 
     @Bean
+    @ConditionalOnMissingBean
     public RedisConnectionFactory redisConnectionFactory() {
         JedisPoolConfig poolConfig = new JedisPoolConfig();
         poolConfig.setMaxTotal(properties.getPool().getMaxActive());
