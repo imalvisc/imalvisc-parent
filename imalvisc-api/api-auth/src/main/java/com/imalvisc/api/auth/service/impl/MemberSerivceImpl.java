@@ -19,4 +19,9 @@ public class MemberSerivceImpl implements MemberSerivce {
         return memberMapper.findAll();
     }
 
+    @Override
+    public Member findByName(String name) {
+        return memberMapper.findByName(name);
+    }
+
 }

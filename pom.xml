@@ -34,10 +34,26 @@
         <commons.pool2.version>2.4.2</commons.pool2.version>
         <jedis.version>2.9.0</jedis.version>
         <fastjson.version>1.2.47</fastjson.version>
+        <shiro.version>1.4.0</shiro.version>
+        <jjwt.version>0.9.1</jjwt.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Shiro SpringBoot组件 -->
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring-boot-web-starter</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+
+            <!-- jjwt库，用于生成与校验jwt token -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
 
             <!-- 阿里巴巴fastjson插件 -->
             <dependency>

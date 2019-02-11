@@ -4,10 +4,8 @@ import com.imalvisc.common.model.po.Member;
 
 import java.util.List;
 
-public interface MemberSerivce {
+public interface AuthSerivce {
 
-    List<Member> findAll();
-
-    Member findByName(String name);
+    Member login(String name, String password);
 
 }

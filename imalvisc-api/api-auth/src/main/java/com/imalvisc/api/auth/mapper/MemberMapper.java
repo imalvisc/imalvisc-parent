@@ -8,4 +8,6 @@ public interface MemberMapper {
 
     List<Member> findAll();
 
+    Member findByName(String name);
+
 }

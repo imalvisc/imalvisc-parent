@@ -7,4 +7,9 @@
         select * from imal_member
     </select>
 
+    <!-- 根据名称查询会员 -->
+    <select id="findByName" resultType="member">
+        select * from imal_member where name = #{name}
+    </select>
+
 </mapper>
