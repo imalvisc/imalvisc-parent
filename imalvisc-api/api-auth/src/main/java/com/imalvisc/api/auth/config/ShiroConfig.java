@@ -1,6 +1,6 @@
 package com.imalvisc.api.auth.config;
 
-import com.imalvisc.api.auth.core.shiro.JwtFilter;
+import com.imalvisc.api.auth.core.shiro.ShrioFilter;
 import com.imalvisc.api.auth.core.shiro.ShiroRealm;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
@@ -24,16 +24,12 @@ public class ShiroConfig {
 
         Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
         filterChainDefinitionMap.put("/auth/**", "anon");
-        filterChainDefinitionMap.put("/druid/**", "anon");
-        filterChainDefinitionMap.put("/swagger**/**", "anon");
-        filterChainDefinitionMap.put("/webjars/**", "anon");
-        filterChainDefinitionMap.put("/v2/**", "anon");
 
         Map<String, Filter> filterMap = new LinkedHashMap<>(1);
-        filterMap.put("jwtFilter", new JwtFilter());
+        filterMap.put("shrioFilter", new ShrioFilter());
         shiroFilterFactoryBean.setFilters(filterMap);
 
-        filterChainDefinitionMap.put("/**", "jwtFilter");
+        filterChainDefinitionMap.put("/**", "shrioFilter");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
         return shiroFilterFactoryBean;

@@ -5,7 +5,7 @@ import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class JwtFilter extends BasicHttpAuthenticationFilter {
+public class ShrioFilter extends BasicHttpAuthenticationFilter {
 
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) {
