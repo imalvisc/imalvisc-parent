@@ -8,6 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.Map;
 
 @Slf4j
 @Data
@@ -16,6 +17,8 @@ import javax.annotation.PostConstruct;
 @Component
 @ConfigurationProperties(prefix = "shiro")
 public class ShiroProperties {
+
+    private Map<String, String> filterChain;
 
     @PostConstruct
     public void init() {
