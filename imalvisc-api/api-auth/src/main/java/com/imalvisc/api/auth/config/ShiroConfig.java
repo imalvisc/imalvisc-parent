@@ -2,6 +2,7 @@ package com.imalvisc.api.auth.config;
 
 import com.imalvisc.api.auth.core.shiro.ShrioFilter;
 import com.imalvisc.api.auth.core.shiro.ShiroRealm;
+import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.mgt.DefaultSessionStorageEvaluator;
 import org.apache.shiro.mgt.DefaultSubjectDAO;
 import org.apache.shiro.mgt.SecurityManager;

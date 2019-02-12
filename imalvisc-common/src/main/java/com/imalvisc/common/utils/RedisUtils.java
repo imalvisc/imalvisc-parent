@@ -1,11 +1,11 @@
-package com.imalvisc.common.util;
+package com.imalvisc.common.utils;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.io.Serializable;
 
-public class RedisUtil {
+public class RedisUtils {
 
     private static StringRedisTemplate stringRedisTemplate;
     private static final String STRING_REDIS_TEMPLATE_BEAN_NAME = "stringRedisTemplate";
@@ -13,8 +13,8 @@ public class RedisUtil {
     private static final String REDIS_TEMPLATE_BEAN_NAME = "redisTemplate";
 
     static {
-        stringRedisTemplate = (StringRedisTemplate) SpringUtil.getBean(STRING_REDIS_TEMPLATE_BEAN_NAME);
-        redisTemplate = (RedisTemplate<String, Object>) SpringUtil.getBean(REDIS_TEMPLATE_BEAN_NAME);
+        stringRedisTemplate = (StringRedisTemplate) SpringUtils.getBean(STRING_REDIS_TEMPLATE_BEAN_NAME);
+        redisTemplate = (RedisTemplate<String, Object>) SpringUtils.getBean(REDIS_TEMPLATE_BEAN_NAME);
     }
 
     public static void setString(String key, String value) {

@@ -1,4 +1,4 @@
-package com.imalvisc.common.util;
+package com.imalvisc.common.utils;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,14 +7,14 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SpringUtil implements ApplicationContextAware {
+public class SpringUtils implements ApplicationContextAware {
 
     @Autowired
     private static ApplicationContext applicationContext;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        SpringUtil.applicationContext = applicationContext;
+        SpringUtils.applicationContext = applicationContext;
     }
 
     public static <T> T getBean(Class<T> t) {

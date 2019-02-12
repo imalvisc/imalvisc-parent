@@ -2,8 +2,8 @@ package com.imalvisc.api.auth.controller;
 
 import com.imalvisc.api.auth.service.MemberSerivce;
 import com.imalvisc.common.model.po.Member;
-import com.imalvisc.common.util.RabbitMqUtil;
-import com.imalvisc.common.util.RedisUtil;
+import com.imalvisc.common.utils.RabbitMqUtils;
+import com.imalvisc.common.utils.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,14 +24,14 @@ public class MemberController {
 
     @GetMapping(value = "/findAll")
     public List<Member> findAll() {
-        RedisUtil.setString("key", "测试字符串");
-        log.info("key的值为：{}", RedisUtil.getString("key"));
-        RedisUtil.setObject("member", memberSerivce.findAll().get(0));
-        log.info("key的值为：{}", RedisUtil.getObject("member"));
+        RedisUtils.setString("key", "测试字符串");
+        log.info("key的值为：{}", RedisUtils.getString("key"));
+        RedisUtils.setObject("member", memberSerivce.findAll().get(0));
+        log.info("key的值为：{}", RedisUtils.getObject("member"));
         Map<String, String> message = new HashMap<>();
         message.put("name", "陈佳明");
         message.put("type", "1");
-        RabbitMqUtil.send("imalvisc-direct", "login-record", message);
+        RabbitMqUtils.send("imalvisc-direct", "login-record", message);
         return memberSerivce.findAll();
     }
 

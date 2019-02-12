@@ -1,13 +1,13 @@
-package com.imalvisc.common.util;
+package com.imalvisc.common.utils;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 
-public class RabbitMqUtil {
+public class RabbitMqUtils {
 
     private static RabbitTemplate rabbitTemplate;
 
     static {
-        rabbitTemplate = SpringUtil.getBean(RabbitTemplate.class);
+        rabbitTemplate = SpringUtils.getBean(RabbitTemplate.class);
     }
 
     public static void send(String exchange, String routingKey, Object message) {

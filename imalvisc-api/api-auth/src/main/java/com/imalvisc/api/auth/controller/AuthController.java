@@ -1,7 +1,7 @@
 package com.imalvisc.api.auth.controller;
 
+import com.imalvisc.api.auth.model.vo.AuthTokenVO;
 import com.imalvisc.api.auth.service.AuthSerivce;
-import com.imalvisc.common.model.po.Member;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,7 @@ public class AuthController {
     private AuthSerivce authSerivce;
 
     @GetMapping(value = "/login")
-    public Member login(String name, String password) {
+    public AuthTokenVO login(String name, String password) {
         return authSerivce.login(name, password);
     }
 
