@@ -1,6 +1,6 @@
 package com.imalvisc.api.auth.service.impl;
 
-import com.imalvisc.api.auth.model.state.TokenState;
+import com.imalvisc.api.auth.model.state.TokenType;
 import com.imalvisc.api.auth.model.vo.AuthTokenVO;
 import com.imalvisc.api.auth.service.AuthSerivce;
 import com.imalvisc.api.auth.service.MemberSerivce;
@@ -18,7 +18,7 @@ public class AuthServiceImpl implements AuthSerivce {
     @Override
     public AuthTokenVO login(String name, String password) {
         Member member = memberSerivce.findByName(name);
-        return new AuthTokenVO().setAccessToken(JwtUtils.create(member.getId(), TokenState.ACCESS_TOKEN));
+        return new AuthTokenVO().setAccessToken(JwtUtils.create(member.getId(), TokenType.ACCESS_TOKEN));
     }
 
 }
