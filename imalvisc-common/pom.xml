@@ -22,6 +22,12 @@
             <version>1.0.0</version>
         </dependency>
 
+        <!-- 阿里巴巴fastjson插件 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
