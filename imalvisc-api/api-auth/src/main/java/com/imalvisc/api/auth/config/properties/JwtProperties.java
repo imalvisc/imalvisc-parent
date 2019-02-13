@@ -20,8 +20,8 @@ public class JwtProperties {
     private String claim;
     private String prefix;
     private String secret;
-    private String accessTokenExpired;
-    private String refreshTokenExpired;
+    private int accessTokenExpired;
+    private int refreshTokenExpired;
 
     @PostConstruct
     public void init() {

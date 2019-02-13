@@ -1,6 +1,6 @@
 package com.imalvisc.api.auth.model.state;
 
-public enum TokenType {
+public enum AuthTokenType {
 
     ACCESS_TOKEN("access_token", "access_token"),
     REFRESH_TOKEN("refresh_token", "refresh_token");
@@ -9,7 +9,7 @@ public enum TokenType {
 
     private String value;
 
-    TokenType(String key, String value) {
+    AuthTokenType(String key, String value) {
         this.key = key;
         this.value = value;
     }
@@ -21,4 +21,5 @@ public enum TokenType {
     public String getValue() {
         return value;
     }
+
 }

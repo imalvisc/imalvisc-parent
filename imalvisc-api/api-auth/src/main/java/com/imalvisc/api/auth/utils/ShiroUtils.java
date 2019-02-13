@@ -1,15 +1,15 @@
 package com.imalvisc.api.auth.utils;
 
-import com.imalvisc.api.auth.core.auth.Auth;
+import com.imalvisc.api.auth.core.auth.AuthToken;
 import com.imalvisc.api.auth.model.vo.AuthTokenVO;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 
 public class ShiroUtils {
 
-    public static AuthTokenVO login(Auth auth) {
+    public static AuthTokenVO login(AuthToken authToken) {
         Subject subject = currSubject();
-        subject.login(auth);
+        subject.login(authToken);
         return null;
     }
 
