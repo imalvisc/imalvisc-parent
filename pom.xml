@@ -36,10 +36,18 @@
         <fastjson.version>1.2.47</fastjson.version>
         <shiro.version>1.4.0</shiro.version>
         <jjwt.version>0.9.1</jjwt.version>
+        <hutool.version>4.5.0</hutool.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Hutool工具类 -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
 
             <!-- Shiro SpringBoot组件 -->
             <dependency>

@@ -3,7 +3,7 @@ package com.imalvisc.api.auth.utils;
 import com.imalvisc.api.auth.config.properties.JwtProperties;
 import com.imalvisc.api.auth.model.state.AuthTokenType;
 import com.imalvisc.common.utils.DateTimeUtils;
-import com.imalvisc.common.utils.SpringUtils;
+import com.imalvisc.common.support.SpringIOCSupport;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
@@ -14,7 +14,7 @@ public class JwtUtils {
     private static JwtProperties properties;
 
     static {
-        properties = SpringUtils.getBean(JwtProperties.class);
+        properties = SpringIOCSupport.getBean(JwtProperties.class);
     }
 
     public static String create(Object claim, AuthTokenType type) {

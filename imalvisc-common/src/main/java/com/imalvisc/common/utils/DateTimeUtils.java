@@ -1,75 +1,131 @@
 package com.imalvisc.common.utils;
 
+import cn.hutool.core.date.DateUtil;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * @author imalvisc
+ * @version v1.0
+ * @ClassName DateTimeUtils
+ * @Description 日期时间工具类
+ * @motto 学会编程而不是学会编码！
+ * @date 2019-03-29 10:44
+ */
 public class DateTimeUtils {
 
+    /**
+     * 当前时间
+     * @return
+     */
     public static Date date() {
-        return Calendar.getInstance().getTime();
+        return DateUtil.date();
     }
 
-    public static Date dateWithDayPlus(int day) {
-        return dateWithDayPlus(date(), day);
+    /**
+     * 偏移天
+     * @param offset 正数向后偏移，负数向前偏移
+     * @return
+     */
+    public static Date offsetDay(int offset) {
+        return DateUtil.offsetDay(date(), offset);
     }
 
-    public static Date dateWithDayPlus(Date source, int day) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(source);
-        calendar.add(Calendar.DAY_OF_YEAR, day);
-        return calendar.getTime();
+    /**
+     * 偏移秒
+     * @param offset
+     * @return
+     */
+    public static Date offsetSecond(int offset) {
+        return DateUtil.offsetSecond(date(), offset);
     }
 
-    public static Date dateWithSecondPlus(int second) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.SECOND, second);
-        return calendar.getTime();
+    /**
+     * 偏移毫秒
+     * @param offset
+     * @return
+     */
+    public static Date offsetMillisecond(int offset) {
+        return DateUtil.offsetMillisecond(date(), offset);
     }
 
-    public static Date dateWithMillsPlus(int mills) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.MILLISECOND, mills);
-        return calendar.getTime();
-    }
-
+    /**
+     * 当前毫秒数
+     * @return
+     */
     public static long millis() {
-        return Calendar.getInstance().getTimeInMillis();
+        return millis(date());
     }
 
+    /**
+     * 计算毫秒数
+     * @param date
+     * @return
+     */
     public static long millis(Date date) {
         return date.getTime();
     }
 
-    public static String format() {
-        return format("yyyy-MM-dd");
+    /**
+     * 格式化当前日期，格式：yyyy-MM-dd
+     * @return
+     */
+    public static String formatDay() {
+        return DateUtil.today();
     }
 
+    /**
+     * 格式化当前时间，格式：yyyy-MM-dd HH:mm:ss
+     * @return
+     */
+    public static String formatTime() {
+        return DateUtil.now();
+    }
+
+    /**
+     * 格式化指定时间
+     * @param date
+     * @param format
+     * @return
+     */
+    public static String format(Date date, String format) {
+        return DateUtil.format(date, format);
+    }
+
+    /**
+     * 格式化当前时间
+     * @param pattern
+     * @return
+     */
     public static String format(String pattern) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
-        return dateFormat.format(date());
+        return format(date(), pattern);
     }
 
-    public static Date parse(String source, String pattern) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
-        try {
-            return dateFormat.parse(source);
-        } catch (ParseException e) {
-            return null;
-        }
+    /**
+     * 解析日期或时间字符串
+     * 能够自动识别以下格式：
+     * 1、yyyy-MM-dd HH:mm:ss
+     * 2、yyyy-MM-dd
+     * 3、HH:mm:ss
+     * 4、yyyy-MM-dd HH:mm
+     * 5、yyyy-MM-dd HH:mm:ss.SSS
+     * @param source
+     * @return
+     */
+    public static Date parse(String source) {
+        return DateUtil.parse(source);
     }
 
-    public static Date parseDate(String source) {
-        return parse(source, "yyyy-MM-dd");
-    }
-
-    public static Date parseDateTime(String source) {
-        return parse(source, "yyyy-MM-dd HH:mm:ss");
-    }
-
-    public static Date parseTime(String source) {
-        return parse(source, "HH:mm:ss");
+    /**
+     * 自定义格式解析日期或时间字符串
+     * @param source
+     * @param format
+     * @return
+     */
+    public static Date parse(String source, String format) {
+        return DateUtil.parse(source, format);
     }
 
 }

@@ -1,13 +1,27 @@
 package com.imalvisc.common.utils;
 
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
-public class JsonUtils {
+/**
+ * @author imalvisc
+ * @version v1.0
+ * @ClassName JSONUtils
+ * @Description JSON工具类
+ * @motto 学会编程而不是学会编码！
+ * @date 2019-03-29 10:44
+ */
+public class JSONUtils {
 
-    public static String toJsonString(Object obj) {
-        return JSON.toJSONString(obj);
+    /**
+     * 转换为JSON字符串
+     * @param obj
+     * @return
+     */
+    public static String toJsonStr(Object obj) {
+        return JSONUtil.toJsonStr(obj);
     }
 
     public static JSONObject parseToObject(String text) {
@@ -22,7 +36,7 @@ public class JsonUtils {
         if (obj instanceof String) {
             return JSON.parseObject(obj.toString(), clazz);
         }
-        return JSON.parseObject(toJsonString(obj), clazz);
+        return JSON.parseObject(toJsonStr(obj), clazz);
     }
 
 }

@@ -1,5 +1,6 @@
 package com.imalvisc.common.utils;
 
+import com.imalvisc.common.support.SpringIOCSupport;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
@@ -13,8 +14,8 @@ public class RedisUtils {
     private static final String REDIS_TEMPLATE_BEAN_NAME = "redisTemplate";
 
     static {
-        stringRedisTemplate = (StringRedisTemplate) SpringUtils.getBean(STRING_REDIS_TEMPLATE_BEAN_NAME);
-        redisTemplate = (RedisTemplate<String, Object>) SpringUtils.getBean(REDIS_TEMPLATE_BEAN_NAME);
+        stringRedisTemplate = (StringRedisTemplate) SpringIOCSupport.getBean(STRING_REDIS_TEMPLATE_BEAN_NAME);
+        redisTemplate = (RedisTemplate<String, Object>) SpringIOCSupport.getBean(REDIS_TEMPLATE_BEAN_NAME);
     }
 
     public static void setString(String key, String value) {

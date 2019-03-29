@@ -2,7 +2,7 @@ package com.imalvisc.api.auth.controller;
 
 import com.imalvisc.api.auth.service.MemberSerivce;
 import com.imalvisc.common.model.po.Member;
-import com.imalvisc.common.utils.JsonUtils;
+import com.imalvisc.common.utils.JSONUtils;
 import com.imalvisc.common.utils.RabbitMqUtils;
 import com.imalvisc.common.utils.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +33,7 @@ public class MemberController {
         message.put("name", "陈佳明");
         message.put("type", "1");
         RabbitMqUtils.send("imalvisc-direct", "login-record", message);
-        System.out.println(JsonUtils.toJsonString(memberSerivce.findAll()));
+        System.out.println(JSONUtils.toJsonStr(memberSerivce.findAll()));
         return memberSerivce.findAll();
     }
 
