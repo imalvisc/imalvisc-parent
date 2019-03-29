@@ -13,7 +13,11 @@
 
     <artifactId>api-user</artifactId>
     <packaging>jar</packaging>
-    <name>api-user-info</name>
+    <name>api-user</name>
+
+    <dependencies>
+
+    </dependencies>
 
 
 </project>

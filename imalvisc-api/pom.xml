@@ -29,6 +29,18 @@
             <version>1.0.0</version>
         </dependency>
 
+        <!-- Swagger Bootstrap UI -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+        </dependency>
+
+        <!-- Swagger核心包 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
