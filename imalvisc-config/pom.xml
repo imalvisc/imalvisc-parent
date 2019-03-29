@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>imalvisc-config</artifactId>
+    <name>imalvisc-config</name>
     <packaging>jar</packaging>
 
     <dependencies>

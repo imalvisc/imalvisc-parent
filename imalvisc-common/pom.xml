@@ -16,7 +16,7 @@
 
     <dependencies>
 
-        <!-- 架构环境组件 -->
+        <!-- 架构环境模块 -->
         <dependency>
             <groupId>com.imalvisc</groupId>
             <artifactId>imalvisc-env</artifactId>

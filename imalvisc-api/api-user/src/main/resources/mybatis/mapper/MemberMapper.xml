@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imalvisc.api.authToken.mapper.MemberMapper">
+
+    <!-- 查询全部会员 -->
+    <select id="findAll" resultType="member">
+        select * from imal_member
+    </select>
+
+    <!-- 根据名称查询会员 -->
+    <select id="findByName" resultType="member">
+        select * from imal_member where name = #{name}
+    </select>
+
+</mapper>
