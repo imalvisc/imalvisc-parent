@@ -18,28 +18,10 @@
         <module>api-common</module>
         <module>api-auth</module>
         <module>api-user</module>
+        <module>api-eureka-7001</module>
     </modules>
 
     <dependencies>
-
-        <!-- 架构公共模块 -->
-        <dependency>
-            <groupId>com.imalvisc</groupId>
-            <artifactId>imalvisc-common</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-        <!-- Swagger Bootstrap UI -->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>swagger-bootstrap-ui</artifactId>
-        </dependency>
-
-        <!-- Swagger核心包 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-        </dependency>
 
     </dependencies>
 
