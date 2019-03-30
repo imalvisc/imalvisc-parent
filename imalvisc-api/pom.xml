@@ -19,6 +19,8 @@
         <module>api-auth</module>
         <module>api-user</module>
         <module>api-eureka-7001</module>
+        <module>api-eureka-7002</module>
+        <module>api-eureka-7003</module>
     </modules>
 
     <dependencies>

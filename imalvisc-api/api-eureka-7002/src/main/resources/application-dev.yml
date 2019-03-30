@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: api-eureka
+
+server:
+  port: 7002
+
+eureka:
+  instance:
+    hostname: eureka7002
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001:7001/eureka/,http://eureka7003:7003/eureka/
+    register-with-eureka: true
+    fetch-registry: true
