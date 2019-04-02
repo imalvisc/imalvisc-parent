@@ -1,5 +1,6 @@
-package com.imalvisc.api.user.config;
+package com.imalvisc.api.common.swagger.config;
 
+import com.github.xiaoymin.swaggerbootstrapui.annotations.EnableSwaggerBootstrapUI;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -14,15 +15,16 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * @author imalvisc
  * @version v1.0
- * @ClassName Swagger2Config
- * @Description Swagger配置
+ * @ClassName SwaggerAutoConfiguration
+ * @Description Swagger自动配置类
  * @motto 学会编程而不是学会编码！
- * @date 2019-03-29 17:23
+ * @date 2019-04-02 10:31
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
 @Configuration
 @EnableSwagger2
-public class Swagger2Config {
+@EnableSwaggerBootstrapUI
+public class SwaggerAutoConfiguration {
 
     /**
      * 开启Swagger
@@ -31,6 +33,7 @@ public class Swagger2Config {
     @Bean
     public Docket createDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
+            .enable(true)
             .apiInfo(apiInfo())
             .groupName("imalvisc-用户服务接口文档")
             .select()

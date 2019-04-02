@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>imalvisc-api</artifactId>
         <groupId>com.imalvisc</groupId>
@@ -25,6 +25,12 @@
             <groupId>com.imalvisc</groupId>
             <artifactId>api-common</artifactId>
             <version>1.0.0</version>
+        </dependency>
+
+        <!-- jjwt库，用于生成与校验jwt token -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
         </dependency>
 
         <!-- Swagger Bootstrap UI -->

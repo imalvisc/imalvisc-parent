@@ -10,15 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>api-common</artifactId>
+    <packaging>pom</packaging>
 
-    <dependencies>
-
-        <!-- jjwt库，用于生成与校验jwt token -->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-        </dependency>
-
-    </dependencies>
+    <modules>
+        <module>api-common-swagger</module>
+    </modules>
 
 </project>

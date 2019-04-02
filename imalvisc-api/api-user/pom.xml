@@ -21,41 +21,20 @@
         <dependency>
             <groupId>com.imalvisc</groupId>
             <artifactId>imalvisc-common</artifactId>
-            <version>1.0.0</version>
+            <version>${project.version}</version>
         </dependency>
 
-        <!-- Api公共模块 -->
+        <!-- Common Swagger -->
         <dependency>
             <groupId>com.imalvisc</groupId>
-            <artifactId>api-common</artifactId>
-            <version>1.0.0</version>
+            <artifactId>api-common-swagger</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <!-- Eureka客户端 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <!-- Swagger Bootstrap UI -->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-            <artifactId>swagger-bootstrap-ui</artifactId>
-        </dependency>
-
-        <!-- Swagger核心包 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-        </dependency>
-
-        <!--
-        Google guava库，因为netflix eureka client与swagger
-        两者依赖的guava版本存在冲突，所以这里独立依赖guava库
-         -->
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
         </dependency>
 
     </dependencies>
