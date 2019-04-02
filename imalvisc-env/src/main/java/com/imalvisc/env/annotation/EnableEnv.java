@@ -21,7 +21,6 @@ import org.springframework.context.annotation.Import;
  * @Description 开启架构环境（数据源、Redis、RabbitMQ等）自动配置注解
  * @motto 学会编程而不是学会编码！
  * @date 2019-04-02 10:31
- * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

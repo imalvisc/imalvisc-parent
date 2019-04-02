@@ -13,7 +13,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @Description 用户模块SpringBoot启动类
  * @motto 学会编程而不是学会编码！
  * @date 2019-03-29 15:12
- * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
 @SpringBootApplication
 @EnableEnv
