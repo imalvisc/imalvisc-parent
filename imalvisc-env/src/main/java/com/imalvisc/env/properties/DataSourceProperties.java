@@ -1,4 +1,4 @@
-package com.imalvisc.env.config.properties;
+package com.imalvisc.env.properties;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,20 +15,18 @@ import javax.annotation.PostConstruct;
 @NoArgsConstructor
 @Accessors(chain = true)
 @Component
-@ConfigurationProperties(prefix = "redis")
+@ConfigurationProperties(prefix = "jdbc")
 @PropertySource(value = "classpath:env.properties")
-public class RedisProperties {
+public class DataSourceProperties {
 
-    private JedisPoolProperties pool = new JedisPoolProperties();
-    private String host;
-    private int port;
+    private String driver;
+    private String url;
+    private String username;
     private String password;
-    private int timeout;
-    private int database;
 
     @PostConstruct
     public void init() {
-        log.info("Redis配置参数：{}", this.toString());
+        log.info("数据库配置参数：{}", this.toString());
     }
 
 }

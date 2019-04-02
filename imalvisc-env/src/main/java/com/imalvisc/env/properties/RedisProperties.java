@@ -1,4 +1,4 @@
-package com.imalvisc.env.config.properties;
+package com.imalvisc.env.properties;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,18 +15,20 @@ import javax.annotation.PostConstruct;
 @NoArgsConstructor
 @Accessors(chain = true)
 @Component
-@ConfigurationProperties(prefix = "rabbitmq")
+@ConfigurationProperties(prefix = "redis")
 @PropertySource(value = "classpath:env.properties")
-public class RabbitMqProperties {
+public class RedisProperties {
 
+    private JedisPoolProperties pool = new JedisPoolProperties();
     private String host;
     private int port;
-    private String username;
     private String password;
+    private int timeout;
+    private int database;
 
     @PostConstruct
     public void init() {
-        log.info("RabbitMq配置参数：{}", this.toString());
+        log.info("Redis配置参数：{}", this.toString());
     }
 
 }

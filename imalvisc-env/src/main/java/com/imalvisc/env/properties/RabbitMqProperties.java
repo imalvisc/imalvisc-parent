@@ -1,4 +1,4 @@
-package com.imalvisc.env.config.properties;
+package com.imalvisc.env.properties;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,18 +15,18 @@ import javax.annotation.PostConstruct;
 @NoArgsConstructor
 @Accessors(chain = true)
 @Component
-@ConfigurationProperties(prefix = "jdbc")
+@ConfigurationProperties(prefix = "rabbitmq")
 @PropertySource(value = "classpath:env.properties")
-public class DataSourceProperties {
+public class RabbitMqProperties {
 
-    private String driver;
-    private String url;
+    private String host;
+    private int port;
     private String username;
     private String password;
 
     @PostConstruct
     public void init() {
-        log.info("数据库配置参数：{}", this.toString());
+        log.info("RabbitMq配置参数：{}", this.toString());
     }
 
 }

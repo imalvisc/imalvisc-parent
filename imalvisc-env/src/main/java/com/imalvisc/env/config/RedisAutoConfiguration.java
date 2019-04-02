@@ -1,6 +1,6 @@
 package com.imalvisc.env.config;
 
-import com.imalvisc.env.config.properties.RedisProperties;
+import com.imalvisc.env.properties.RedisProperties;
 import com.imalvisc.env.core.redis.RedisSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -19,7 +19,7 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.time.Duration;
 
 @Configuration
-public class RedisConfig {
+public class RedisAutoConfiguration {
 
     @Autowired
     private RedisProperties properties;

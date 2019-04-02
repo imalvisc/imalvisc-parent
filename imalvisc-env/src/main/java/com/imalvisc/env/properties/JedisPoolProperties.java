@@ -1,4 +1,4 @@
-package com.imalvisc.env.config.properties;
+package com.imalvisc.env.properties;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

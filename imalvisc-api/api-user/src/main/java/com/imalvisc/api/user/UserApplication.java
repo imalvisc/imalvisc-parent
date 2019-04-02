@@ -1,10 +1,10 @@
 package com.imalvisc.api.user;
 
 import com.imalvisc.api.common.swagger.annotation.EnableSwagger;
+import com.imalvisc.env.annotation.EnableEnv;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author imalvisc
@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
 @SpringBootApplication
-@ComponentScan(value = "com.imalvisc")
+@EnableEnv
 @EnableEurekaClient
 @EnableSwagger
 public class UserApplication {

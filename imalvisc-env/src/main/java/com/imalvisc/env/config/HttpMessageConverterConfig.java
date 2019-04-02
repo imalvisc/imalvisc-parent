@@ -20,12 +20,12 @@ public class HttpMessageConverterConfig {
 
         FastJsonConfig fastJsonConfig = new FastJsonConfig();
         fastJsonConfig.setSerializerFeatures(
-                SerializerFeature.PrettyFormat,
-                SerializerFeature.WriteMapNullValue,
-                SerializerFeature.WriteNullListAsEmpty,
-                SerializerFeature.WriteNullStringAsEmpty,
-                SerializerFeature.WriteNullNumberAsZero,
-                SerializerFeature.WriteNullBooleanAsFalse);
+            SerializerFeature.PrettyFormat,
+            SerializerFeature.WriteMapNullValue,
+            SerializerFeature.WriteNullListAsEmpty,
+            SerializerFeature.WriteNullStringAsEmpty,
+            SerializerFeature.WriteNullNumberAsZero,
+            SerializerFeature.WriteNullBooleanAsFalse);
         fastJsonConvert.setFastJsonConfig(fastJsonConfig);
 
         List<MediaType> mediaTypes = new ArrayList<>();

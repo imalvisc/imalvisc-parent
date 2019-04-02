@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Import;
  * @author imalvisc
  * @version v1.0
  * @ClassName EnableSwagger
- * @Description 开启Swagger注解
+ * @Description 开启Swagger自动配置注解
  * @motto 学会编程而不是学会编码！
  * @date 2019-04-02 10:31
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
