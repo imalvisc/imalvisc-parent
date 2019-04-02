@@ -9,15 +9,15 @@ eureka:
   instance:
     hostname: eureka7001
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
-###Eureka单机配置
-#  client:
-#    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:7001/eureka/
-#    register-with-eureka: false
-#    fetch-registry: false
-###Eureka集群配置
+  ###Eureka单机配置
   client:
     serviceUrl:
-      defaultZone: http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
-    register-with-eureka: true
-    fetch-registry: true
+      defaultZone: http://${eureka.instance.hostname}:7001/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+#  ###Eureka集群配置
+#  client:
+#    serviceUrl:
+#      defaultZone: http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
+#    register-with-eureka: true
+#    fetch-registry: true

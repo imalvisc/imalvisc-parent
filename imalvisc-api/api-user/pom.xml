@@ -31,6 +31,12 @@
             <version>1.0.0</version>
         </dependency>
 
+        <!-- Eureka客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <!-- Swagger Bootstrap UI -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
@@ -41,6 +47,15 @@
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
+        </dependency>
+
+        <!--
+        Google guava库，因为netflix eureka client与swagger
+        两者依赖的guava版本存在冲突，所以这里独立依赖guava库
+         -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
         </dependency>
 
     </dependencies>

@@ -41,6 +41,7 @@
         <hutool.version>4.5.0</hutool.version>
         <swagger.version>2.9.2</swagger.version>
         <swagger.bootstrap.ui.version>1.9.1</swagger.bootstrap.ui.version>
+        <guava.version>20.0</guava.version>
     </properties>
 
     <dependencyManagement>
@@ -53,6 +54,13 @@
                 <version>${spring.cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- Google guava库 -->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
             </dependency>
 
             <!-- Swagger Bootstrap UI -->
