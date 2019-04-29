@@ -1,11 +1,19 @@
 package com.imalvisc.user.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.imalvisc.user.model.dto.PageDTO;
 import com.imalvisc.user.model.entity.UserInfo;
+import com.imalvisc.user.model.vo.PageVO;
 import com.imalvisc.user.service.UserInfoService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author imalvisc
@@ -21,6 +29,11 @@ public class UserInfoController {
 
     @Autowired
     private UserInfoService userInfoService;
+
+    @GetMapping(value = "/list")
+    public PageVO<UserInfo> list(PageDTO pageDTO) {
+        return userInfoService.selectPage(pageDTO);
+    }
 
     @GetMapping(value = "/save")
     public boolean save(String userName, String password) {

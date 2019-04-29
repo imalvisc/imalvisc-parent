@@ -1,7 +1,9 @@
 package com.imalvisc.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.imalvisc.user.model.dto.PageDTO;
 import com.imalvisc.user.model.entity.UserInfo;
+import com.imalvisc.user.model.vo.PageVO;
 
 /**
  * @author imalvisc
@@ -13,6 +15,8 @@ import com.imalvisc.user.model.entity.UserInfo;
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
 public interface UserInfoService extends IService<UserInfo> {
+
+    PageVO<UserInfo> selectPage(PageDTO pageDTO);
 
     boolean insert(UserInfo userInfo);
 

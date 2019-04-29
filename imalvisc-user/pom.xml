@@ -33,13 +33,6 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!-- Apache log4j, druid数据源日志监控需要依赖 -->
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>${apache.log4j.version}</version>
-        </dependency>
-
         <!-- Druid数据源 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -57,6 +50,12 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <!-- pagehelper 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
         </dependency>
 
     </dependencies>
