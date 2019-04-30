@@ -43,19 +43,10 @@
         <swagger.version>2.9.2</swagger.version>
         <swagger.bootstrap.ui.version>1.9.1</swagger.bootstrap.ui.version>
         <guava.version>20.0</guava.version>
-        <pagehelper.version>5.1.8</pagehelper.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-
-            <!-- pagehelper 分页插件 -->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>${pagehelper.version}</version>
-            </dependency>
-
             <!-- Spring Cloud 微服务 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>

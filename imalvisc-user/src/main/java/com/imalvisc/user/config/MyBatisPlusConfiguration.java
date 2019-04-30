@@ -1,15 +1,10 @@
 package com.imalvisc.user.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
-import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
-import java.util.Properties;
 
 /**
  * @author imalvisc
@@ -24,15 +19,17 @@ import java.util.Properties;
 @MapperScan(value = "com.imalvisc.user.mapper")
 public class MyBatisPlusConfiguration {
 
-    /**
-     * SQL执行性能监控插件
-     * dev和test环境开启
-     */
-    @Bean
-    @Profile(value = {"dev", "test"})
-    public PerformanceInterceptor performanceInterceptor() {
-        return new PerformanceInterceptor();
-    }
+//    /**
+//     * SQL执行性能监控插件
+//     * dev和test环境开启
+//     */
+//    @Bean
+//    @Profile(value = {"dev", "test"})
+//    public PerformanceInterceptor performanceInterceptor() {
+//        PerformanceInterceptor performanceInterceptor = new PerformanceInterceptor();
+//        performanceInterceptor.setFormat(true);
+//        return performanceInterceptor;
+//    }
 
     /**
      * 分页插件
@@ -41,7 +38,9 @@ public class MyBatisPlusConfiguration {
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
-        return new PaginationInterceptor();
+        PaginationInterceptor paginationInterceptor = new PaginationInterceptor();
+        paginationInterceptor.setLimit(Integer.MAX_VALUE);
+        return paginationInterceptor;
     }
 
 }

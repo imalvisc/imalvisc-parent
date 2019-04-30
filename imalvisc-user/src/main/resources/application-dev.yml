@@ -47,5 +47,5 @@ mybatis-plus:
   configuration:
     #驼峰下划线转换
     map-underscore-to-camel-case: true
-    #开启缓存
-    #cache-enabled: false
+    #日志打印
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

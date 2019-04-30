@@ -2,6 +2,7 @@ package com.imalvisc.user.service.impl;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.imalvisc.user.exception.RespException;
 import com.imalvisc.user.mapper.UserInfoMapper;
 import com.imalvisc.user.model.dto.PageDTO;
 import com.imalvisc.user.model.entity.UserInfo;
@@ -9,6 +10,10 @@ import com.imalvisc.user.model.vo.PageVO;
 import com.imalvisc.user.service.UserInfoService;
 import com.imalvisc.user.util.PageUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author imalvisc
@@ -28,8 +33,14 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo>
         return PageUtils.parsePage(iPage);
     }
 
+    @Override
+    @Transactional
     public boolean insert(UserInfo userInfo) {
-        return this.save(userInfo);
+        boolean e = this.save(userInfo);
+        if (true) {
+            throw new RespException(12345, "测试错误");
+        }
+        return e;
     }
 
 }

@@ -1,19 +1,18 @@
 package com.imalvisc.user.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.imalvisc.user.model.dto.PageDTO;
 import com.imalvisc.user.model.entity.UserInfo;
 import com.imalvisc.user.model.vo.PageVO;
+import com.imalvisc.user.resp.RespMessage;
 import com.imalvisc.user.service.UserInfoService;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 /**
  * @author imalvisc
@@ -31,19 +30,18 @@ public class UserInfoController {
     private UserInfoService userInfoService;
 
     @GetMapping(value = "/list")
-    public PageVO<UserInfo> list(PageDTO pageDTO) {
-        return userInfoService.selectPage(pageDTO);
+    public RespMessage<PageVO<UserInfo>> list(PageDTO pageDTO) {
+        return RespMessage.success(userInfoService.selectPage(pageDTO));
     }
 
-    @GetMapping(value = "/save")
-    public boolean save(String userName, String password) {
-        return userInfoService.insert(UserInfo.builder().userName(userName).password(password).build());
+    @PostMapping(value = "/save")
+    public RespMessage<Boolean> save(@RequestBody @Validated UserInfo userInfo, BindingResult bindingResult) {
+        return RespMessage.success(userInfoService.insert(userInfo));
     }
 
     @GetMapping(value = "/delete")
-    public Boolean delete(Long id) {
-        //return userInfoService.removeById(id);
-        return UserInfo.builder().id(id).build().deleteById();
+    public RespMessage<Boolean> delete(Long id) {
+        return RespMessage.success(userInfoService.removeById(id));
     }
 
 }

@@ -11,6 +11,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * @author imalvisc
  * @version v1.0
@@ -36,6 +38,7 @@ public class UserInfo extends Model<UserInfo> {
     /**
      * 用户名
      */
+    @NotBlank(message = "用户名不能为空")
     private String userName;
 
     /**
