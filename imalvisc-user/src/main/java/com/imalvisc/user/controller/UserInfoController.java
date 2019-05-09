@@ -1,6 +1,7 @@
 package com.imalvisc.user.controller;
 
 import com.imalvisc.user.model.dto.PageDTO;
+import com.imalvisc.user.model.dto.UserInfoDTO;
 import com.imalvisc.user.model.entity.UserInfo;
 import com.imalvisc.user.model.vo.PageVO;
 import com.imalvisc.user.resp.RespMessage;
@@ -35,8 +36,8 @@ public class UserInfoController {
     }
 
     @PostMapping(value = "/save")
-    public RespMessage<Boolean> save(@RequestBody @Validated UserInfo userInfo, BindingResult bindingResult) {
-        return RespMessage.success(userInfoService.insert(userInfo));
+    public RespMessage<Boolean> save(@RequestBody @Validated UserInfoDTO userInfoDTO, BindingResult bindingResult) {
+        return RespMessage.success(userInfoService.insert(userInfoDTO));
     }
 
     @GetMapping(value = "/delete")

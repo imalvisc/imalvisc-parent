@@ -1,6 +1,5 @@
 package com.imalvisc.user.model.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -10,8 +9,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotBlank;
 
 /**
  * @author imalvisc
@@ -38,7 +35,6 @@ public class UserInfo extends Model<UserInfo> {
     /**
      * 用户名
      */
-    @NotBlank(message = "用户名不能为空")
     private String userName;
 
     /**

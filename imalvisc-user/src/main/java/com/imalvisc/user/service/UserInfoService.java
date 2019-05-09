@@ -2,6 +2,7 @@ package com.imalvisc.user.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.imalvisc.user.model.dto.PageDTO;
+import com.imalvisc.user.model.dto.UserInfoDTO;
 import com.imalvisc.user.model.entity.UserInfo;
 import com.imalvisc.user.model.vo.PageVO;
 
@@ -18,6 +19,6 @@ public interface UserInfoService extends IService<UserInfo> {
 
     PageVO<UserInfo> selectPage(PageDTO pageDTO);
 
-    boolean insert(UserInfo userInfo);
+    boolean insert(UserInfoDTO userInfoDTO);
 
 }
