@@ -41,6 +41,7 @@ public class ApolloRefreshAutoConfiguration {
                             log.info("Apollo Found change - namespace: {}, key: {}, oldValue: {}, newValue: {}, changeType: {}",
                                     changeEvent.getNamespace(), change.getPropertyName(), change.getOldValue(), change.getNewValue(), change.getChangeType());
                         }
+                        //利用SpringCloud提供的RefreshScope来刷新SpringBoot的环境配置
                         refreshScope.refreshAll();
                     });
                 }
