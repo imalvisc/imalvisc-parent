@@ -1,6 +1,5 @@
 package com.imalvisc.apollo.annotation;
 
-import com.imalvisc.apollo.config.ApolloRefreshAutoConfiguration;
 import com.imalvisc.apollo.registrar.CustomApolloConfigRegistrar;
 import org.springframework.context.annotation.Import;
 
@@ -13,7 +12,7 @@ import java.lang.annotation.Target;
 /**
  * @author imalvisc
  * @version v1.0
- * @ClassName EnableCustomApolloConfig
+ * @ClassName CustomEnableApolloConfig
  * @Description 开启Apollo配置注解
  * @motto 学会编程而不是学会编码！
  * @date 2019-06-04 20:49
@@ -22,8 +21,8 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
 @Documented
-@Import(value = {CustomApolloConfigRegistrar.class, ApolloRefreshAutoConfiguration.class})
-public @interface EnableCustomApolloConfig {
+@Import(value = {CustomApolloConfigRegistrar.class})
+public @interface CustomEnableApolloConfig {
 
     /**
      * namespace命名空间, 默认为Apollo默认的application

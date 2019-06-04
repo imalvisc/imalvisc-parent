@@ -1,11 +1,11 @@
 package com.imalvisc.user;
 
-import com.imalvisc.apollo.annotation.EnableCustomApolloConfig;
+import com.imalvisc.apollo.annotation.CustomEnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@EnableCustomApolloConfig(value = {"application.properties", "imalvisc.properties"})
+@CustomEnableApolloConfig(value = {"application.properties", "imalvisc.properties"})
 public class UserApplication {
 
     public static void main(String[] args) {
