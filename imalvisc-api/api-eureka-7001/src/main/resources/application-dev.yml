@@ -19,5 +19,5 @@ eureka:
 #  client:
 #    serviceUrl:
 #      defaultZone: http://eureka7002:7002/eureka/,http://eureka7003:7003/eureka/
-#    register-with-eureka: true
+#    registrar-with-eureka: true
 #    fetch-registry: true

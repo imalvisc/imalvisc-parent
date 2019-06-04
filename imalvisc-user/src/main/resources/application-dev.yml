@@ -49,3 +49,9 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     #日志打印
     #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+app:
+  id: imalvisc
+apollo:
+  meta: http://127.0.0.1:8080
+  cacheDir: /data/project/${app.id}/config-cache
