@@ -1,6 +1,7 @@
 package com.imalvisc.framework.redis.annotation;
 
 import com.imalvisc.framework.redis.config.CustomRedisAutoConfiguration;
+import com.imalvisc.framework.redis.registrar.CustomRedisConfigRegistrar;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.Documented;
@@ -23,7 +24,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@Import(value = {CustomRedisAutoConfiguration.class})
+@Import(value = {CustomRedisAutoConfiguration.class, CustomRedisConfigRegistrar.class})
 public @interface CustomEnableRedisConfig {
 
 }

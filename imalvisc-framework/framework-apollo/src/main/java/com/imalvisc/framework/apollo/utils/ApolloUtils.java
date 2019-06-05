@@ -43,14 +43,4 @@ public class ApolloUtils {
         return getProperty(DEFAULT_NAMESPACE, key, defaultValue);
     }
 
-    /**
-     * 获取配置属性
-     *
-     * @param key
-     * @return
-     */
-    public static String getProperty(String key) {
-        return getProperty(key, "");
-    }
-
 }
