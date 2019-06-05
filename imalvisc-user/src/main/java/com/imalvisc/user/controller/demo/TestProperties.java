@@ -1,4 +1,4 @@
-package com.imalvisc.user.controller;
+package com.imalvisc.user.controller.demo;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

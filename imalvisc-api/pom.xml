@@ -15,7 +15,6 @@
 
     <name>imalvisc-api</name>
     <modules>
-        <module>api-common</module>
         <module>api-auth</module>
         <module>api-user</module>
         <module>api-eureka-7001</module>

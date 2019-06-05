@@ -50,8 +50,24 @@ mybatis-plus:
     #日志打印
     #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+
+###apollo配置
 app:
   id: imalvisc
 apollo:
   meta: http://127.0.0.1:8080
   cacheDir: /data/project/${app.id}/config-cache
+
+
+###swagger配置
+swagger:
+  enable: true
+  basePackage: com.imalvisc.user.controller
+  title: v1.0用户中心接口文档
+  description: v1.0用户中心接口文档
+  termsOfServiceUrl: http://localhost:6061/
+  version: v1.0
+  contact:
+    name: 陈嘉明
+    url: https://www.baidu.com/
+    email: 13570038865@163.com

@@ -16,6 +16,7 @@
 
     <modules>
         <module>framework-apollo</module>
+        <module>framework-swagger</module>
     </modules>
 
     <dependencies>

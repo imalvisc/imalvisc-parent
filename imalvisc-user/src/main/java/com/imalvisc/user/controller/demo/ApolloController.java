@@ -1,7 +1,10 @@
-package com.imalvisc.user.controller;
+package com.imalvisc.user.controller.demo;
 
 import com.ctrip.framework.apollo.Config;
 import com.ctrip.framework.apollo.spring.annotation.ApolloConfig;
+import com.imalvisc.framework.apollo.utils.ApolloUtils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,25 +13,24 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author imalvisc
  * @version v1.0
- * @ClassName TestController
- * @Description TODO
+ * @ClassName ApolloController
+ * @Description Apollo Demo
  * @motto 学会编程而不是学会编码！
  * @date 2019-06-04 18:11
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
+@Api(value = "Apollo演示", tags = "Apollo演示")
 @RestController
-@RequestMapping(value = "/test")
-public class TestController {
+@RequestMapping(value = "/demo/apollo")
+public class ApolloController {
 
     @Autowired
     private TestProperties test;
 
-    @ApolloConfig(value = "imalvisc")
-    private Config config;
-
-    @GetMapping(value = "/demo")
-    public String demo() {
-        return config.getProperty("test", null) + "-----" + test;
+    @ApiOperation(value = "测试", notes = "测试")
+    @GetMapping(value = "/test")
+    public String test() {
+        return ApolloUtils.getProperty("imalvisc", "test", "") + "-----" + test;
     }
 
 }

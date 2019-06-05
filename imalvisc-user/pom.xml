@@ -15,9 +15,17 @@
 
     <dependencies>
 
+        <!-- 架构: apollo组件 -->
         <dependency>
             <groupId>com.imalvisc</groupId>
             <artifactId>framework-apollo</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- 架构: swagger组件 -->
+        <dependency>
+            <groupId>com.imalvisc</groupId>
+            <artifactId>framework-swagger</artifactId>
             <version>1.0.0</version>
         </dependency>
 
