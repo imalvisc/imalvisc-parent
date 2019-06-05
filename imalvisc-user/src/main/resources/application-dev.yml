@@ -28,6 +28,21 @@ spring:
       max-pool-prepared-statement-per-connection-size: 20
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
 
+###Redis配置
+redis:
+  password:
+  port: 6379
+  host: 127.0.0.1
+  timeout: 5000
+  pool:
+    maxActive: 10
+    maxWait: -1
+    maxIdle: 8
+    minIdle: 0
+    testOnBorrow: true
+    testOnReturn: false
+    testWhileIdle: true
+
 mybatis-plus:
   #xml文件路径
   mapper-locations: classpath*:/mapper/*.xml
@@ -55,6 +70,9 @@ mybatis-plus:
 app:
   id: imalvisc
 apollo:
+  bootstrap:
+    enabled: true
+    namespaces: application,imalvisc
   meta: http://127.0.0.1:8080
   cacheDir: /data/project/${app.id}/config-cache
 

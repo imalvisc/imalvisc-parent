@@ -15,14 +15,21 @@
 
     <dependencies>
 
-        <!-- 架构: apollo组件 -->
+        <!-- 架构: Redis组件 -->
+        <dependency>
+            <groupId>com.imalvisc</groupId>
+            <artifactId>framework-redis</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!-- 架构: Apollo组件 -->
         <dependency>
             <groupId>com.imalvisc</groupId>
             <artifactId>framework-apollo</artifactId>
             <version>1.0.0</version>
         </dependency>
 
-        <!-- 架构: swagger组件 -->
+        <!-- 架构: Swagger组件 -->
         <dependency>
             <groupId>com.imalvisc</groupId>
             <artifactId>framework-swagger</artifactId>

@@ -154,7 +154,7 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- 配置Spring Milestones仓库，Spring Cloud依赖支持 -->
+    <!-- 配置Spring Milestones仓库, Spring Cloud依赖支持 -->
     <repositories>
         <repository>
             <id>spring-milestones</id>

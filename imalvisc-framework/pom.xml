@@ -17,6 +17,7 @@
     <modules>
         <module>framework-apollo</module>
         <module>framework-swagger</module>
+        <module>framework-redis</module>
     </modules>
 
     <dependencies>

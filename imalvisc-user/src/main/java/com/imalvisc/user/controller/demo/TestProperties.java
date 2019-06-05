@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
+//import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -23,7 +23,6 @@ import org.springframework.stereotype.Component;
 @Builder
 @Component
 @ConfigurationProperties(prefix = "test")
-@RefreshScope
 public class TestProperties {
 
     private String a;
