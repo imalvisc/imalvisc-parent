@@ -1,6 +1,6 @@
-package com.imalvisc.apollo.annotation;
+package com.imalvisc.framework.apollo.annotation;
 
-import com.imalvisc.apollo.registrar.CustomApolloConfigRegistrar;
+import com.imalvisc.framework.apollo.registrar.CustomApolloConfigRegistrar;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.Documented;

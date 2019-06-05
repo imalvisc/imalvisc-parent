@@ -1,4 +1,4 @@
-package com.imalvisc.apollo.utils;
+package com.imalvisc.framework.apollo.utils;
 
 /**
  * @author imalvisc

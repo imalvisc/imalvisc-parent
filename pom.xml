@@ -15,7 +15,7 @@
         <module>imalvisc-config</module>
         <module>imalvisc-env</module>
         <module>imalvisc-user</module>
-        <module>imalvisc-apollo</module>
+        <module>imalvisc-framework</module>
     </modules>
     <packaging>pom</packaging>
 

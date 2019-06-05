@@ -1,4 +1,4 @@
-package com.imalvisc.apollo.registrar;
+package com.imalvisc.framework.apollo.registrar;
 
 import com.ctrip.framework.apollo.Config;
 import com.ctrip.framework.apollo.ConfigService;
@@ -10,7 +10,7 @@ import com.ctrip.framework.apollo.spring.config.PropertySourcesProcessor;
 import com.ctrip.framework.apollo.spring.property.SpringValueDefinitionProcessor;
 import com.ctrip.framework.apollo.spring.util.BeanRegistrationUtil;
 import com.google.common.collect.Lists;
-import com.imalvisc.apollo.annotation.CustomEnableApolloConfig;
+import com.imalvisc.framework.apollo.annotation.CustomEnableApolloConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;

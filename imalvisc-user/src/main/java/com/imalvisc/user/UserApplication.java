@@ -1,6 +1,6 @@
 package com.imalvisc.user;
 
-import com.imalvisc.apollo.annotation.CustomEnableApolloConfig;
+import com.imalvisc.framework.apollo.annotation.CustomEnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
