@@ -1,0 +1,27 @@
+server:
+  port: 6062
+
+spring:
+  application:
+    name: order
+
+###eureka配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001:7001/eureka/
+    registrar-with-eureka: true
+    fetch-registry: true
+
+###swagger配置
+swagger:
+  enable: true
+  basePackage: com.imalvisc.order.controller
+  title: v1.0订单中心接口文档
+  description: v1.0订单中心接口文档
+  termsOfServiceUrl: http://localhost:6062/
+  version: v1.0
+  contact:
+    name: 陈嘉明
+    url: https://www.baidu.com/
+    email: 13570038865@163.com

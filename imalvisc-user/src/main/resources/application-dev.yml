@@ -1,9 +1,21 @@
 server:
   port: 6061
 
+
+###apollo配置
+app:
+  id: imalvisc
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: application,imalvisc
+  meta: http://127.0.0.1:8080
+  cacheDir: /data/project/${app.id}/config-cache
+
 spring:
   application:
     name: user
+  ###druid数据源配置
   datasource:
     name: druidDataSource
     type: com.alibaba.druid.pool.DruidDataSource
@@ -27,6 +39,35 @@ spring:
       max-open-prepared-statements: 50
       max-pool-prepared-statement-per-connection-size: 20
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  data:
+    redis:
+      repositories:
+        enabled: false
+    jpa:
+      repositories:
+        enabled: false
+
+###eureka配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka7001:7001/eureka/
+    registrar-with-eureka: true
+    fetch-registry: true
+
+###feign配置
+feign:
+  hystrix:
+    enabled: true #开启熔断机制
+
+###hystrix配置
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
 
 ###Redis配置
 redis:
@@ -64,17 +105,6 @@ mybatis-plus:
     map-underscore-to-camel-case: true
     #日志打印
     #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-
-###apollo配置
-app:
-  id: imalvisc
-apollo:
-  bootstrap:
-    enabled: true
-    namespaces: application,imalvisc
-  meta: http://127.0.0.1:8080
-  cacheDir: /data/project/${app.id}/config-cache
 
 
 ###swagger配置
