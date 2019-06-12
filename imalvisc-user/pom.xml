@@ -61,6 +61,12 @@
             <artifactId>hutool-all</artifactId>
         </dependency>
 
+        <!-- SpringBoot Starter组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
         <!-- SpringBoot AOP组件 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

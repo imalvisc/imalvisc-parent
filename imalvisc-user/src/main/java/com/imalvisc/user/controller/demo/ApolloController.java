@@ -1,6 +1,5 @@
 package com.imalvisc.user.controller.demo;
 
-import com.imalvisc.framework.apollo.utils.ApolloUtils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +27,8 @@ public class ApolloController {
     @ApiOperation(value = "测试", notes = "测试")
     @GetMapping(value = "/test")
     public String test() {
-        return ApolloUtils.getProperty("imalvisc", "test", "") + "-----" + test;
-        //return null;
+        //return ApolloUtils.getProperty("imalvisc", "test", "") + "-----" + test;
+        return null;
     }
 
 }

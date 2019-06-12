@@ -2,17 +2,6 @@ server:
   port: 6061
 
 
-###apollo配置
-app:
-  id: imalvisc
-apollo:
-  bootstrap:
-    enabled: true
-    namespaces: application,imalvisc
-  meta: http://127.0.0.1:8080
-  cacheDir: /data/project/${app.id}/config-cache
-
-
 spring:
   application:
     name: user
@@ -20,12 +9,11 @@ spring:
   datasource:
     name: dataSource
     type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/imalvisc?useSSL=false
+    username: root
+    password: imalvisc
     druid:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://127.0.0.1:3306/imalvisc?useSSL=false
-      username: root
-      password: imalvisc
-      #filters: stat,wall,log4j,config
       max-active: 100
       initial-size: 1
       max-wait: 60000
@@ -39,7 +27,19 @@ spring:
       pool-prepared-statements: true
       max-open-prepared-statements: 50
       max-pool-prepared-statement-per-connection-size: 20
+      #filters: stat,wall,log4j,config
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+
+###apollo配置
+app:
+  id: imalvisc
+apollo:
+  bootstrap:
+    enabled: true
+    namespaces: application,imalvisc
+  meta: http://127.0.0.1:8080
+  cacheDir: /data/project/${app.id}/config-cache
 
 
 ###eureka配置
