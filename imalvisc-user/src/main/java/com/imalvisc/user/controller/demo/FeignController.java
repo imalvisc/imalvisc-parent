@@ -3,7 +3,6 @@ package com.imalvisc.user.controller.demo;
 import com.imalvisc.api.order.OrderService;
 import com.imalvisc.api.order.dto.CreateOrderDTO;
 import com.imalvisc.api.order.vo.CreateOrderVO;
-import com.imalvisc.framework.apollo.utils.ApolloUtils;
 import com.imalvisc.user.resp.RespMessage;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;

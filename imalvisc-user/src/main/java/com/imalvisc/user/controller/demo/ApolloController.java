@@ -29,6 +29,7 @@ public class ApolloController {
     @GetMapping(value = "/test")
     public String test() {
         return ApolloUtils.getProperty("imalvisc", "test", "") + "-----" + test;
+        //return null;
     }
 
 }

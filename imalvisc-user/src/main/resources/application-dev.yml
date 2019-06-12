@@ -18,7 +18,7 @@ spring:
     name: user
   ###druid数据源配置
   datasource:
-    name: druidDataSource
+    name: dataSource
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.mysql.jdbc.Driver
