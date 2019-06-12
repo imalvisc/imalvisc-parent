@@ -14,13 +14,6 @@
 
     <dependencies>
 
-        <!-- 配置文件模块 -->
-        <dependency>
-            <groupId>com.imalvisc</groupId>
-            <artifactId>imalvisc-config</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
         <!-- lombok插件 -->
         <dependency>
             <groupId>org.projectlombok</groupId>

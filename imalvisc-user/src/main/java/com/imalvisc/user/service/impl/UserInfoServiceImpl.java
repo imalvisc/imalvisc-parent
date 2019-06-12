@@ -1,17 +1,15 @@
 package com.imalvisc.user.service.impl;
 
-import cn.hutool.core.bean.BeanUtil;
-import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.imalvisc.user.mapper.UserInfoMapper;
 import com.imalvisc.user.model.dto.PageDTO;
 import com.imalvisc.user.model.dto.UserInfoDTO;
 import com.imalvisc.user.model.entity.UserInfo;
 import com.imalvisc.user.model.vo.PageVO;
 import com.imalvisc.user.service.UserInfoService;
-import com.imalvisc.user.util.PageUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 /**
  * @author imalvisc
@@ -22,20 +20,23 @@ import org.springframework.transaction.annotation.Transactional;
  * @date 2019-04-29 11:16
  */
 @Service
-public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo>
-        implements UserInfoService {
+public class UserInfoServiceImpl implements UserInfoService {
 
+    @Autowired
+    private UserInfoMapper userInfoMapper;
+
+    @Override
     public PageVO<UserInfo> selectPage(PageDTO pageDTO) {
-        IPage<UserInfo> iPage = PageUtils.toPage(pageDTO, UserInfo.class);
-        iPage = this.page(iPage);
-        return PageUtils.parsePage(iPage);
+        return null;
     }
 
     @Override
-    @Transactional
-    public boolean insert(UserInfoDTO userInfoDTO) {
-        UserInfo userInfo = BeanUtil.toBean(userInfoDTO, UserInfo.class);
-        return this.save(userInfo);
+    public List<UserInfo> selectList() {
+        return userInfoMapper.selectAll();
     }
 
+    @Override
+    public boolean insert(UserInfoDTO userInfoDTO) {
+        return false;
+    }
 }

@@ -1,10 +1,11 @@
 package com.imalvisc.user.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
 import com.imalvisc.user.model.dto.PageDTO;
 import com.imalvisc.user.model.dto.UserInfoDTO;
 import com.imalvisc.user.model.entity.UserInfo;
 import com.imalvisc.user.model.vo.PageVO;
+
+import java.util.List;
 
 /**
  * @author imalvisc
@@ -15,9 +16,11 @@ import com.imalvisc.user.model.vo.PageVO;
  * @date 2019-04-29 11:17
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
-public interface UserInfoService extends IService<UserInfo> {
+public interface UserInfoService {
 
     PageVO<UserInfo> selectPage(PageDTO pageDTO);
+
+    List<UserInfo> selectList();
 
     boolean insert(UserInfoDTO userInfoDTO);
 

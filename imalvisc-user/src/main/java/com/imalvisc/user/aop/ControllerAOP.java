@@ -29,8 +29,8 @@ import java.util.Objects;
 /**
  * @author imalvisc
  * @version v1.0
- * @ClassName InvokeTimeAdvice
- * @Description 执行时间切面监听器
+ * @ClassName ControllerAOP
+ * @Description Controller通用切面
  * @motto 学会编程而不是学会编码！
  * @date 2019-04-29 17:01
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.

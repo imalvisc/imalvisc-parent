@@ -1,14 +1,14 @@
 package com.imalvisc.user.model.entity;
 
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author imalvisc
@@ -19,17 +19,17 @@ import lombok.NoArgsConstructor;
  * @date 2019-04-29 11:08
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@TableName
-public class UserInfo extends Model<UserInfo> {
+@Table(name = "tb_user_info")
+public class UserInfo {
 
     /**
      * ID
      */
-    @TableId
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     /**
@@ -45,7 +45,6 @@ public class UserInfo extends Model<UserInfo> {
     /**
      * 删除标识
      */
-    @TableLogic
     private Integer delFlag;
 
 }
