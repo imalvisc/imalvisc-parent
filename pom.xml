@@ -16,6 +16,7 @@
         <module>imalvisc-framework</module>
         <module>imalvisc-order</module>
         <module>imalvisc-api</module>
+        <module>spring-mybatis</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -34,6 +35,7 @@
         <spring.cloud.version>Finchley.M7</spring.cloud.version>
         <lombok.version>1.16.18</lombok.version>
         <druid.version>1.1.10</druid.version>
+        <mybatis.version>2.0.1</mybatis.version>
         <tkmapper.version>2.1.5</tkmapper.version>
         <commons.pool2.version>2.4.2</commons.pool2.version>
         <jedis.version>2.9.0</jedis.version>
@@ -150,18 +152,25 @@
                 <version>${commons.pool2.version}</version>
             </dependency>
 
-            <!-- tkmapper SpringBoot组件 -->
-            <dependency>
-                <groupId>tk.mybatis</groupId>
-                <artifactId>mapper-spring-boot-starter</artifactId>
-                <version>${tkmapper.version}</version>
-            </dependency>
-
             <!-- Druid数据源 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
+            </dependency>
+
+            <!-- Mybatis SpringBoot组件 -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!-- tkmapper SpringBoot组件 -->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${tkmapper.version}</version>
             </dependency>
 
             <!-- lombok插件 -->

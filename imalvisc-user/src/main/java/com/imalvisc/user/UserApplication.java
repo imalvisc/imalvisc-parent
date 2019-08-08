@@ -17,7 +17,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableCircuitBreaker
 @CustomEnableSwaggerConfig
 @CustomEnableRedisConfig
-@MapperScan(basePackages = "com.imalvisc.user.mapper")
+@MapperScan(basePackages = "com.imalvisc.user.com.imalvisc.spring.mybatis.mapper")
 public class UserApplication {
 
     public static void main(String[] args) {
