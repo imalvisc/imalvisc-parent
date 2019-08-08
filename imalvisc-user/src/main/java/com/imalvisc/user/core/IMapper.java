@@ -16,6 +16,6 @@ import tk.mybatis.mapper.common.MySqlMapper;
  * @Copyright Guangzhou CheXingYi Information Technology Co., Ltd.
  */
 @RegisterMapper
-public interface IMapper<T> extends Mapper<T>, MySqlMapper<T>, ConditionMapper<T>, IdsMapper<T> {
+public interface IMapper<T> extends Mapper<T>, ConditionMapper<T>, IdsMapper<T>, MySqlMapper<T> {
 
 }
