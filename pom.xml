@@ -17,6 +17,7 @@
         <module>imalvisc-order</module>
         <module>imalvisc-api</module>
         <module>spring-mybatis</module>
+        <module>spring-bean</module>
     </modules>
     <packaging>pom</packaging>
 
