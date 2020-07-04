@@ -18,6 +18,7 @@
         <module>imalvisc-api</module>
         <module>spring-mybatis</module>
         <module>spring-bean</module>
+        <module>netty</module>
     </modules>
     <packaging>pom</packaging>
 
