@@ -19,6 +19,7 @@
         <module>spring-mybatis</module>
         <module>spring-bean</module>
         <module>netty</module>
+        <module>algorithm</module>
     </modules>
     <packaging>pom</packaging>
 
