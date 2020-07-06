@@ -19,9 +19,10 @@ public class InsertSort {
                 arr[insertIdx + 1] = arr[insertIdx];
                 insertIdx--;
             }
-            if (insertIdx != i - 1) {
+            /*if (insertIdx != i - 1) {
                 arr[insertIdx + 1] = insertVal;
-            }
+            }*/
+            arr[insertIdx + 1] = insertVal;
         }
         System.out.println("排序后结果：" + Arrays.toString(arr));
 
