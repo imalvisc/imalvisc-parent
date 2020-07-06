@@ -9,7 +9,7 @@ public class ShellSort {
 
     public static void main(String[] args) {
 
-        int[] arr = new int[]{1, -1, 15, 66, -3, 55, -8};
+        int[] arr = new int[]{1, -1, 15, 66, -3, 55};
         int insertVal;
         int insertIdx;
         for (int step = arr.length / 2; step > 0; step /= 2) {
