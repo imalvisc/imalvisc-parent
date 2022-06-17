@@ -42,7 +42,7 @@
         <tkmapper.version>2.1.5</tkmapper.version>
         <commons.pool2.version>2.4.2</commons.pool2.version>
         <jedis.version>2.9.0</jedis.version>
-        <fastjson.version>1.2.47</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <shiro.version>1.4.0</shiro.version>
         <jjwt.version>0.9.1</jjwt.version>
         <hutool.version>4.5.0</hutool.version>
