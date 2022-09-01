@@ -51,7 +51,7 @@
         <swagger.bootstrap.ui.version>1.9.1</swagger.bootstrap.ui.version>
         <guava.version>20.0</guava.version>
         <apollo.version>1.3.0</apollo.version>
-        <jsoup.version>1.11.3</jsoup.version>
+        <jsoup.version>1.15.3</jsoup.version>
     </properties>
 
     <dependencyManagement>
